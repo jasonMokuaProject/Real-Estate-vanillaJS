@@ -1,0 +1,129 @@
+/* Universal styling */
+
+* {
+    margin: 0px;
+}
+
+
+
+/* Variables */
+:root {
+    --ThemeColour: #6a994e;
+
+}
+
+
+
+
+/*
+Header 
+*/
+
+.navigationbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: sans-serif;
+    box-shadow: 10px;
+    align-items: baseline;
+    height: 33px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#logo {
+
+    color: var(--ThemeColour);
+}
+
+
+#menu {
+
+    display: flex;
+    gap: 32px;
+}
+
+/*
+
+Banner section Los-Angeles-CA.jpg
+*/
+.bannersection {
+    background: url(images/Los-Angeles-CA.jpg) right bottom no-repeat;
+    width: 100%;
+    height: 370px;
+
+}
+
+#searchbox {
+    width: 40%;
+    height: 70%;
+    background-color: white;
+    margin: auto;
+    font-family: sans-serif;
+    position: relative;
+    top: 50px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#searchbox h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+
+.filterOptions {
+    margin: auto;
+    text-align: center;
+    padding: 20px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(2, 49%);
+}
+
+input {
+    padding: 7px;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+select {
+
+    padding: 7px;
+    font-family: sans-serif;
+    font-size: 18px;
+}
+
+input:focus {
+    background-color: lightblue;
+
+}
+
+#searchbutton {
+
+    padding: 7px;
+    font-family: sans-serif;
+    font-size: 18px;
+
+
+
+    width: 94%;
+}
+
+#centerbutton {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+}
+
+
+/* Feature Property */
+
+.featuredproperty h2{
+    text-align: center;
+    margin: 45px;
+    font-family: sans-serif;
+    color: var(--ThemeColour);
+    font-size: 34px;
+    text-shadow: 2px 1px 3px #000000;
+}
