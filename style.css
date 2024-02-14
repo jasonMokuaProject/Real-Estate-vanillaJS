@@ -104,8 +104,6 @@ input:focus {
     font-family: sans-serif;
     font-size: 18px;
 
-
-
     width: 94%;
 }
 
@@ -119,8 +117,9 @@ input:focus {
 
 /* Feature Property */
 
-.featuredproperty h2{
+.featuredproperty h2 {
     text-align: center;
+
     margin: 45px;
     font-family: sans-serif;
     color: var(--ThemeColour);
