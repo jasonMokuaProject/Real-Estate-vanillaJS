@@ -1,75 +1,11 @@
-let Properties =[{
-    id:'gmkofigur4d',
-    propertyType:'Residential Property',
-    price:500000,
-    location:'Charlestown, MD, United States',
-    SaleOrRent:'sale',
-    image:'images/daf661c3c1baf4c3c0668403e0c19dfcc342b956.webp'
-},
-{
-    id:'amyikbgur9x',
-    propertyType:'Residential Property',
-    price:278000,
-    location:'Falcon Way, South Ockendon RM15',
-    SaleOrRent:'sale',
-    image:'images/70f68e97963f396b313761d2fed7c51e057449cd.webp'
-},
-{
-    id:'khjkirgur9x',
-    propertyType:'Commercial Property',
-    price:780000,
-    location:'Douglas Road, Hounslow TW3',
-    SaleOrRent:'sale',
-    image:'images/adda7ef6cddc7e7fe7c31828d251ce5d922dc8ca.webp'
-},
-{
-    id:'vnwmjbcur9x',
-    propertyType:'Residential Property',
-    price:575000,
-    location:'Godolphin Road, London W12',
-    SaleOrRent:'sale',
-    image:'images/afbab50701b26327e139102f0fcae2c4ee0d527c.webp'
-},
-{
-    id:'vffgnmghbcur9x',
-    propertyType:'Residential Property',
-    price:475000,
-    location:'Crossthwaite Avenue, Denmark Hill',
-    SaleOrRent:'sale',
-    image:'images/photo-1518780664697-55e3ad937233.avif'
-},
-{
-    id:'dvkiytmghbcur9x',
-    propertyType:'Residential Property',
-    price:453000,
-    location:'Flat 59 Cambridge Court, Amhurst Park',
-    SaleOrRent:'rent',
-    image:'images/9cb57822ecb3f08a375e957d816a6f36ffab30b2.webp'
-},
 
-{
-    id:'mhjytmghbcur9x',
-    propertyType:'Residential Property',
-    price:375000,
-    location:'Garage At 2A Lucknow Street, Aigburth',
-    SaleOrRent:'sale',
-    image:'images/ecbbdb28317ccd2ed0198495afdd96c2797f0c5e.webp'
-},
-{
-    id:'jlhggyugb3rx',
-    propertyType:'Special Purpose Property',
-    price:629000,
-    location:'150 Parthenon Drive, Liverpool L11',
-    SaleOrRent:'sale',
-    image:'images/2c15d3b3447ad810db2755e9597f0b5918784800.webp'
-},
 
-]; 
+
 let thepropertyContainer = document.getElementsByClassName('featuredTheProperties')[0];
 
-Properties.forEach((x)=>{
+Properties.forEach((x) => {
 
-    thepropertyContainer.innerHTML +=`  <div class="PropertyItem">
+    thepropertyContainer.innerHTML += `  <div class="PropertyItem" id="${x.id}">
     <img src="${x.image}" width="300px" height="200px">
     <div class="description-item">
         <p class="price-of-item">£${x.price}</p>
@@ -82,5 +18,90 @@ Properties.forEach((x)=>{
 
 
 });
+
+
+
+let location_result = document.getElementById('location');
+
+let price_result = document.getElementById('thepriceselected');
+
+
+let saleOrent = document.getElementById('ForSaleOrRent');
+
+
+let property_type_result = document.getElementById('property_type_result');
+
+let thepropertyitems = document.getElementsByClassName('PropertyItem');
+
+function Searchforresult() {
+    let p = 0;
+    while (p < thepropertyitems.length) {
+        thepropertyitems[p].style.display = "none";
+        p++;
+    }
+
+    console.log(location_result.value, price_result.value, saleOrent.value, property_type_result.value);
+
+
+    // Price
+    let TotalSearch = Properties.filter((x) => {
+        return x.price > price_result.value;
+
+    });
+
+
+
+    // location
+    TotalSearch = TotalSearch.filter((x) => {
+        return x.location.match(location_result.value);
+
+    });
+
+    // property type
+    TotalSearch = TotalSearch.filter((x) => {
+
+        return x.propertyType.match(property_type_result.value);
+
+    });
+
+
+
+
+    // Rent or sale
+    TotalSearch = TotalSearch.filter((x) => {
+        return x.SaleOrRent.match(saleOrent.value);
+
+    });
+
+
+
+
+
+
+
+    TotalSearch.forEach((x) => {
+
+        thepropertyContainer.innerHTML += `  <div class="PropertyItem" id="${x.id}">
+    <img src="${x.image}" width="300px" height="200px">
+    <div class="description-item">
+        <p class="price-of-item">£${x.price}</p>
+        <p class="property-type-item">${x.propertyType}</p>
+        <p class="Location-item">${x.location}</p>
+        <button> Request Information</button> <button> View details</button>
+    </div>
+
+   </div>`;
+
+
+    });
+    let i = 0;
+    while (i < TotalSearch.length) {
+
+        thepropertyitems[p].style.display = "block";
+        i++;
+        p++;
+    }
+
+}
 
 

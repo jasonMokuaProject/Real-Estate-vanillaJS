@@ -18,10 +18,10 @@
             <h2>WeHomes</h2>
         </div>
         <div id="menu">
-            <a> Home </a>
+            <a href="index.html"> Home </a>
             <a> About </a>
             <a> Property </a>
-            <a>Contact </a>
+            <a href="contact.html">Contact </a>
         </div>
 
     </div>
@@ -32,7 +32,7 @@
             <div class="filterOptions">
                 <input type="text" id="location" placeholder="Location">
                 <input type="text" id="ForSaleOrRent" placeholder="For Sale Or Rent">
-                <select>
+                <select id="thepriceselected">
                     <option value="Select minimum Price">Select Minimum Price</option>
                     <option value="100000">£100,000</option>
                     <option value="200000">£200,000</option>
@@ -42,7 +42,7 @@
                     <option value="600000">£600,000</option>
                     <option value="700000">£700,000</option>
                 </select>
-                <select>
+                <select id="property_type_result">
                     <option value="Property Type">Property Type</option>
                     <option value="Residential Property">Residential Property</option>
                     <option value="Commercial Property">Commercial Property</option>
@@ -50,13 +50,13 @@
                     <option value="land as a property type">land as a property type</option>
                     <option value="Special Purpose Property">Special Purpose Property</option>
                 </select>
-                
-            </div>
-            <div id="centerbutton">
-                <button id="searchbutton">Search</button>
 
             </div>
-           
+            <div id="centerbutton">
+                <button onclick="Searchforresult()" id="searchbutton">Search</button>
+
+            </div>
+
 
         </div>
     </div>
@@ -64,25 +64,61 @@
     <!-- featured properties-->
 
 
-<div class="featuredproperty">
-    <h2>Featured <span style="color:black">Properties</span></h2>
-</div>
+    <div class="featuredproperty">
+        <h2>Featured <span style="color:black">Properties</span></h2>
+    </div>
 
-<!-- The properties displayed-->
-<div class="centerProperty">
-<div class="featuredTheProperties">
-
-
-
-
-</div>
-
-</div>
-
-<br><br><br><br>
+    <!-- The properties displayed-->
+    <div class="centerProperty">
+        <div class="featuredTheProperties">
 
 
 
+
+        </div>
+
+    </div>
+
+    <br><br><br><br>
+
+
+    <div class="contact-box-footer">
+        <div class="footerInformation">
+            <ul>
+                <li style="font-size:21px;"><b>Branch Locations </b></li>
+                <li>India </li>
+                <li>England </li>
+                <li>USA </li>
+                <li>Russia </li>
+                <li>France </li>
+            </ul>
+            <ul>
+                <li style="font-size:21px;"><b>Quick Links </b></li>
+                <li>Home</li>
+                <li>Services </li>
+                <li>Featured </li>
+                <li>Agents</li>
+                <li>Contact </li>
+            </ul>
+            <ul>
+                <li style="font-size:21px;"><b>Extra Links </b></li>
+                <li>My Favorite </li>
+                <li>My bookings </li>
+                <li>My Account</li>
+            </ul>
+            <ul>
+                <li style="font-size:21px;"><b>Follow Us </b></li>
+                <li>Facebook</li>
+                <li>Twitter </li>
+                <li>Instagram </li>
+                <li>Linkedin </li>
+
+            </ul>
+        </div>
+    </div>
+
+    <br><br>
+    <script src="DataProperties.js"></script>
     <script src="main.js"></script>
 </body>
 

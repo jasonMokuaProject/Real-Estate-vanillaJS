@@ -40,6 +40,12 @@ Header
 
     display: flex;
     gap: 32px;
+    text-decoration: none;
+}
+
+#menu a {
+    text-decoration: none;
+
 }
 
 /*
@@ -127,34 +133,91 @@ input:focus {
 
 }
 
-.featuredTheProperties{
-display: grid;
-grid-template-columns: repeat(4,302px);
-gap: 20px;
-margin: auto;
-font-size:14px;
+.featuredTheProperties {
+    display: grid;
+    grid-template-columns: repeat(4, 302px);
+    gap: 20px;
+    margin: auto;
+    font-size: 14px;
 
 }
-.centerProperty{
+
+.centerProperty {
     font-family: sans-serif;
     justify-content: center;
     align-items: center;
     text-align: center;
     display: flex;
 }
-.PropertyItem{
-border:1px solid black;
+
+.PropertyItem {
+    border: 1px solid black;
 
 }
-.description-item button{
-padding: 10px;    cursor: pointer;
-background-color: var(--ThemeColour);
+
+.description-item button {
+    padding: 10px;
+    cursor: pointer;
+    background-color: var(--ThemeColour);
 
 }
-.description-item p{
-    padding:5px;
+
+.description-item p {
+    padding: 5px;
 }
+
 .description-item {
     padding: 6px;
-    
-    }
+
+}
+
+.contact-box-footer {
+    width: 80%;
+    height: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: auto;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.contact-box-footer ul {
+    list-style-type: none;
+    padding: 10px;
+
+
+}
+
+.contact-box-footer ul li {
+    list-style-type: none;
+    padding: 10px;
+    cursor: pointer;
+
+    font-family: Helvetica;
+
+
+}
+
+.footerInformation {
+    display: flex;
+    gap: 13%;
+}
+
+/*
+CONTACT PAGE 
+
+    */
+
+.contact-box {
+    width: 80%;
+    height: 400px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin: auto;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.grid-contact {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 12px;
+}
