@@ -3,21 +3,26 @@
 
 let thepropertyContainer = document.getElementsByClassName('featuredTheProperties')[0];
 
-Properties.forEach((x) => {
+let countProperties = 0;
 
-    thepropertyContainer.innerHTML += `  <div class="PropertyItem" id="${x.id}">
-    <img src="${x.image}" width="300px" height="200px">
+for (let x = 0; x < 8; x++) {
+
+    thepropertyContainer.innerHTML += `  <div class="PropertyItem" id="${Properties[x].id}">
+    <img src="${Properties[x].image}" width="300px" height="200px">
     <div class="description-item">
-        <p class="price-of-item">£${x.price}</p>
-        <p class="property-type-item">${x.propertyType}</p>
-        <p class="Location-item">${x.location}</p>
+        <p class="price-of-item">£${Properties[x].price}</p>
+        <p class="property-type-item">${Properties[x].propertyType}</p>
+        <p class="Location-item">${Properties[x].location}</p>
         <button> Request Information</button> <button> View details</button>
     </div>
 
    </div>`;
 
 
-});
+
+}
+
+
 
 
 
@@ -42,6 +47,16 @@ function Searchforresult() {
 
     console.log(location_result.value, price_result.value, saleOrent.value, property_type_result.value);
 
+
+    if (property_type_result.value == "Property Type") {
+        property_type_result.value = " ";
+
+    }
+
+    if (price_result.value == "Select minimum Price") {
+        price_result.value = 0;
+
+    }
 
     // Price
     let TotalSearch = Properties.filter((x) => {
